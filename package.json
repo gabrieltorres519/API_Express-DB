@@ -1,0 +1,22 @@
+{
+  "name": "api_express-db",
+  "version": "1.0.0",
+  "description": "API_Express-DB_conexion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrieltorres519/API_Express-DB.git"
+  },
+  "author": "gabrieltorres519",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrieltorres519/API_Express-DB/issues"
+  },
+  "homepage": "https://github.com/gabrieltorres519/API_Express-DB#readme",
+  "devDependencies": {
+    "express": "^4.18.1"
+  }
+}
