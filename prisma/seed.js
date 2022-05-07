@@ -43,6 +43,54 @@ const prisma = new PrismaClient();
       },
     });
 
+    const commander = await prisma.commander.upsert({
+      where: { name: 'commander' },
+      update: {},
+      create: {
+        name: 'Commander',
+				lang: 'lang',
+				missionCommander: 'Node',
+        enrollments: 0,
+        hasCertification: true
+      },
+    });
+
+    const commander1 = await prisma.commander.upsert({
+      where: { name: 'commander1' },
+      update: {},
+      create: {
+        name: 'Commander1',
+				lang: 'lang1',
+				missionCommander: 'Node',
+        enrollments: 1,
+        hasCertification: true
+      },
+    });
+
+    const commander2 = await prisma.commander.upsert({
+      where: { name: 'commander 2' },
+      update: {},
+      create: {
+        name: 'Commander 2',
+				lang: 'lang2',
+				missionCommander: 'Java',
+        enrollments: 2,
+        hasCertification: false
+      },
+    });
+
+    const commander3 = await prisma.commander.upsert({
+      where: { name: 'commander 3' },
+      update: {},
+      create: {
+        name: 'Commander 3',
+				lang: 'lang3',
+				missionCommander: 'Node',
+        enrollments: 3,
+        hasCertification: true
+      },
+    });
+
     console.log('Create 3 explorers');
   } catch(e) {
     console.error(e);
@@ -50,4 +98,6 @@ const prisma = new PrismaClient();
   } finally {
     await prisma.$disconnect();
   }
+
+
 })();
